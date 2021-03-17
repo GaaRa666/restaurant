@@ -1,0 +1,29 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+@import 'src/styles/fonts';
+
+.rest-text-area-root {
+  position: relative;
+  .rest-text-area {
+    font-family: "Source Serif Pro" !important;
+    box-sizing: border-box;
+    height: 48px;
+    padding: 12px 20px;
+    font-size: 17px;
+    letter-spacing: -0.43px;
+    color: $dark-grey;
+    outline: none;
+    border-radius: 5px;
+    border: solid 1px rgba(38, 38, 38, 0.1);
+    resize: none;
+    width: 100%;
+    height: 100%;
+  }
+  .rest-text-area-right {
+    @include flex(row, flex-start, flex-start);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

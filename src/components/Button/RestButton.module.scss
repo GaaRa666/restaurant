@@ -1,0 +1,32 @@
+@import '~src/styles/mixins';
+@import '~src/styles/variables';
+
+.restButtonRoot {
+  @include flex(row, flex-start, center);
+  position: relative;
+  height: 48px;
+  border-radius: 5px;
+  background-color: $orange;
+  padding: 12px 24px 12px 30px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: $orange-dark;
+  }
+}
+
+.restButtonTransparentRoot {
+  @include flex(row, flex-start, center);
+  position: relative;
+  color: $orange;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 0;
+  &:hover {
+    background-color: $grey-hover;
+  }
+}

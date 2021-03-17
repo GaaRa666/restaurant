@@ -1,0 +1,29 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.modal-root {
+  position: relative;
+  overflow: visible;
+  z-index: 1000;
+  .modal {
+    @include flex(column, center, center);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $grey-with-transparency;
+    .modal-content {
+      @include flex(column, center, center);
+      position: relative;
+      flex: 0 0 auto;
+      height: 100%;
+      width: 100%;
+      >* {
+        flex: 0 0 auto;
+        box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.12);
+        border-radius: 10px;
+      }
+    }
+  }
+}

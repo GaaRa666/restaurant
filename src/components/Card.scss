@@ -1,0 +1,40 @@
+@import "src/styles/mixins";
+
+.card {
+  @include flex(column, space-between, stretch);
+  width: 305px;
+  font-family: "Source Serif Pro", serif;
+  box-shadow: 0 0 10px #ccc;
+  margin: 0 5px 30px;
+  border-radius: 10px;
+  padding: 20px 30px 30px;
+  box-sizing: border-box;
+  color: #2e3b50;
+  &-type {
+    @include flex(row, space-between, center);
+    font-size: 11px;
+    letter-spacing: -0.39px;
+  }
+  &-name {
+    display: flex;
+    position: relative;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: -0.61px;
+    &-marker {
+      position: absolute;
+      top: 8px;
+      left: -30px;
+      width: 15px;
+      height: 4px;
+      background-color: #ffb53a;
+    }
+  }
+  &-description {
+    display: flex;
+    margin-top: 20px;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+  }
+}
